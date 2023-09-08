@@ -1,5 +1,8 @@
+import "bootstrap";
 import React from 'react';
+import jQuery from 'jquery';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 import { AppProvider } from './context/AppContext';
 import Budget from './components/Budget';
