@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 
 const Currency = () => {
-    const { dispatch, currency } = useContext(AppContext);
+    const { dispatch } = useContext(AppContext);
     const [selectedCurrency, setSelectedCurrency] = useState("£ Pound");
 
     const handleChangeCurrency = (currency) => {
@@ -13,13 +13,6 @@ const Currency = () => {
             payload: currency[0]
         });
     }
-
-    {/* <select className='custom-select' id="inputGroupSelect01" style={{backgroundColor: "#14fa14", color: "white"}}onChange={(event) => { handleChangeCurrency(event.target.value) }}>
-            <option defaultValue value='£' className='currency-option'>£ Pound</option>
-            <option value='$' className='currency-option'>$ Dollar</option>
-            <option value='€' className='currency-option'>€ Euro </option>
-            <option value='₹' className='currency-option'>$ Rupee</option>
-        </select> */}
 
     return (
         <div className="dropdown">
